@@ -1,7 +1,7 @@
 <p align="center">
 
-![picture alt](https://vignette.wikia.nocookie.net/gravityfalls/images/8/83/Soos_appearance.png/revision/latest?cb=20150915080601 )
-<img src="https://vignette.wikia.nocookie.net/gravityfalls/images/8/83/Soos_appearance.png/revision/latest?cb=20150915080601" data-canonical-src="soos" width="20" height="40" />
+<img src="https://vignette.wikia.nocookie.net/gravityfalls/images/8/83/Soos_appearance.png/revision/latest?cb=20150915080601" data-canonical-src="soos" width="200" height="400" />
+<br>
 Are flight tickets really the cheapest on Tuesday mornings?<br>
 <a href="https://github.com/aayush4vedi/Aeroplot"><img src="https://img.shields.io/badge/version-0.1-f39f37" alt="Downloads"></a>
 <a href="https://github.com/aayush4vedi/Aeroplot"><img src="https://img.shields.io/badge/Made With-python-1abc9c" alt="Downloads"></a>
