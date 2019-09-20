@@ -35,47 +35,14 @@ The project started as a bet among my friends when I told my observation about b
 * 2 flights per day: cheaper(1) & costly(2) both
 
 ## Flights
+list of flights to be tracked: [text-file](https://github.com/aayush4vedi/Aeroplot/blob/master/flights.txt)
 
-| ID  | Date       |  Day  |   Day Type      | Flight Number |  From  |   To   |Dep.Time| 
-|---- | -----      |  ---- |---------------  | --------------| :----: | :----: | ------ |
-| f1  | 27 Sep '19 |  Fri  | Around Holiday  | Indigo-6E2625 |  Blr   |   Del  | 0025   |
-| f2  | 27 Sep '19 |  Fri  | Around Holiday  | GoAir-G8118   |  Blr   |   Del  | 2055   |
-| f3  | 28 Sep '19 |  Sat  | Around Holiday  | GoAir-G8118   |  Blr   |   Del  | 2055   |
-| f4  | 28 Sep '19 |  Sat  | Around Holiday  | SpiceJ-SG6638 |  Blr   |   Del  | 2310   |
-| f5  | 3 Oct '19  |  Tue  | Around Holiday  | GoAir-G8113   |  Del   |   Blr  | 0550   |
-| f6  | 3 Oct '19  |  Tue  | Around Holiday  | AirIn-AI933   |  Del   |   Blr  | 0510   |
-| f7  | 4 Oct '19  |  Fri  | Around Holiday  | Indigo-6E2808 |  Blr   |   Del  | 1930   |
-| f8  | 4 Oct '19  |  Fri  | Around Holiday  | SpiceJ-SG6638 |  Blr   |   Del  | 2310   |
-| f9  | 7 Oct '19  |  Mon  | Around Holiday  | SpiceJ-SG198  |  Blr   |   Del  | 2045   |
-| f10 | 7 Oct '19  |  Mon  | Around Holiday  | Indigo-6E2305 |  Blr   |   Del  | 2125   |
-| f11 | 9 Oct '19  |  Wed  | Around Holiday  | Indigo-6E2042 |  Del   |   Blr  | 0545   |
-| f12 | 9 Oct '19  |  Wed  | Around Holiday  | GoAir-G8113   |  Del   |   Blr  | 0550   |
-| f13 | 24 Oct '19 |  Fri  | Around Holiday  | AirIn-AI587   |  Blr   |   Del  | 2200   |
-| f14 | 24 Oct '19 |  Fri  | Around Holiday  | GoAir-G8118   |  Blr   |   Del  | 2055   |
-| f15 | 25 Oct '19 |  Fri  | Around Holiday  | GoAir-G8518   |  Blr   |   Del  | 2255   |
-| f16 | 25 Oct '19 |  Fri  | Around Holiday  | Indigo-6E2716 |  Blr   |   Del  | 2000   |
-| f17 | 29 Oct '19 |  Fri  | Around Holiday  | Indigo-6E5031 |  Del   |   Blr  | 0505   |
-| f18 | 29 Oct '19 |  Fri  | Around Holiday  | AirIn-AI933   |  Del   |   Blr  | 0510   |
-| f19 | 30 Oct '19 |  Fri  | Around Holiday  | Indigo-6E2701 |  Del   |   Blr  | 0655   |
-| f20 | 30 Oct '19 |  Fri  | Around Holiday  | GoAir-G8207   |  Del   |   Blr  | 0500   |
-| f21 | 25 Sep '19 |  Wed  |     Normal      | Indigo-6E5031 |  Del   |   Blr  | 0505   |
-| f22 | 25 Sep '19 |  Wed  |     Normal      | AirIn-AI851   |  Del   |   Blr  | 0455   |
-| f23 | 25 Sep '19 |  Wed  |     Normal      | GoAir-G8518   |  Blr   |   Del  | 2255   |
-| f24 | 25 Sep '19 |  Wed  |     Normal      | Indigo-6E2716 |  Blr   |   Del  | 2000   |
-| f25 | 10 Oct '19 |  Thu  |     Normal      | SpiceJ-SG8720 |  Blr   |   Del  | 2200   |
-| f26 | 10 Oct '19 |  Thu  |     Normal      | GoAir-G8118   |  Blr   |   Del  | 2055   |
-| f27 | 10 Oct '19 |  Thu  |     Normal      | Indigo-6E683  |  Del   |   Blr  | 0735   |
-| f28 | 10 Oct '19 |  Thu  |     Normal      | GoAir-G82610  |  Del   |   Blr  | 0810   |
-| f29 | 7 Nov '19  |  Thu  |     Normal      | Indigo-6E5031 |  Del   |   Blr  | 0505   |
-| f30 | 7 Nov '19  |  Thu  |     Normal      | AirIn-AI933   |  Del   |   Blr  | 0510   |
-| f31 | 7 Nov '19  |  Thu  |     Normal      | Indigo-6E2484 |  Blr   |   Del  | 2330   |
-| f32 | 7 Nov '19  |  Thu  |     Normal      | AirIn-AI610   |  Blr   |   Del  | 1910   |
 
 # Progress & Blockers:
 * **Blocker>>** Google Flight: getting empty content on parsing. Maybe some unknown issue
 * **Automation:** of to-be-tracked-flights data.Python is <3
     * Point of change: `flights.txt` (also copied in README.md)
-    * txt -> excel: `flate.py`
+    * txt -> excel: `autopilot.py`
     * excel file(just for display): `flights.xlsx`
 
 
