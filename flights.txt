@@ -1,9 +1,6 @@
-import openpyxl
-
-# README.md to excel
-data = """| ID  | Date       |  Day  |   Day Type      | Flight Number |  From  |   To   |Dep.Time| 
-|---- |-----      | ---- |---------------  |--------------| :----: | :----: |------ |
-| f1  | 27-09-2019 |  Fri  | Around Holiday  | Indigo-6E2625 |  Blr   |   Del  | 0025   |
+| IIIID  | Date       |  Day  |   Day Type      | Flight Number |  From  |   To   |Dep.Time| 
+|---- |-----       | ----  |---------------  |---------------| :----: | :----: |------- |
+| f10 | 27-09-2019 |  Fri  | Around Holiday  | Indigo-6E2625 |  Blr   |   Del  | 0025   |
 | f2  | 27-09-2019 |  Fri  | Around Holiday  | GoAir-G8118   |  Blr   |   Del  | 2055   |
 | f3  | 28-09-2019 |  Sat  | Around Holiday  | GoAir-G8118   |  Blr   |   Del  | 2055   |
 | f4  | 28-09-2019 |  Sat  | Around Holiday  | SpiceJ-SG6638 |  Blr   |   Del  | 2310   |
@@ -34,49 +31,4 @@ data = """| ID  | Date       |  Day  |   Day Type      | Flight Number |  From  
 | f29 | 7-11-2019  |  Thu  |     Normal      | Indigo-6E5031 |  Del   |   Blr  | 0505   |
 | f30 | 7-11-2019  |  Thu  |     Normal      | AirIn-AI933   |  Del   |   Blr  | 0510   |
 | f31 | 7-11-2019  |  Thu  |     Normal      | Indigo-6E2484 |  Blr   |   Del  | 2330   |
-| f32 | 7-11-2019  |  Thu  |     Normal      | AirIn-AI610   |  Blr   |   Del  | 1910   | """
-
-data = data.split("\n")
-ids = []
-dates = []
-days = []
-day_types = []
-flight_numbers = []
-froms =[]
-tos = []
-dep_times = []
-
-wb = openpyxl.load_workbook('aeroplot.xlsx')
-sheet = wb.active
-sheet.cell(row = 1, column = 1).value = "ID"
-sheet.cell(row = 1, column = 2).value = "Date"
-sheet.cell(row = 1, column = 3).value = "Day"
-sheet.cell(row = 1, column = 4).value = "Day Type"
-sheet.cell(row = 1, column = 5).value = "Flight Number"
-sheet.cell(row = 1, column = 6).value = "From"
-sheet.cell(row = 1, column = 7).value = "To"
-sheet.cell(row = 1, column = 8).value = "Dep Time"
-
-data = data[2:]
-r = 2
-for d in data:
-    d = d.split("|")
-    ids.append(d[1].strip())
-    sheet.cell(row = r, column = 1).value = d[1].strip()
-    days.append(d[2].strip())
-    sheet.cell(row = r, column = 2).value = d[2].strip()
-    dates.append(d[3].strip())
-    sheet.cell(row = r, column = 3).value = d[3].strip()
-    day_types.append(d[4].strip())
-    sheet.cell(row = r, column = 4).value = d[4].strip()
-    flight_numbers.append(d[5].strip())
-    sheet.cell(row = r, column = 5).value = d[5].strip()
-    froms.append(d[6].strip())
-    sheet.cell(row = r, column = 6).value = d[6].strip()
-    tos.append(d[7].strip())
-    sheet.cell(row = r, column = 7).value = d[7].strip()
-    dep_times.append(d[8].strip())
-    sheet.cell(row = r, column = 8).value = d[8].strip()
-    r += 1
-
-wb.save('aeroplot.xlsx')
+| f32 | 7-11-2019  |  Thu  |     Normal      | AirIn-AI610   |  Blr   |   Del  | 1910   |

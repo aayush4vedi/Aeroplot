@@ -73,7 +73,10 @@ The project started as a bet among my friends when I told my observation about b
 
 # Progress & Blockers:
 * **Blocker>>** Google Flight: getting empty content on parsing. Maybe some unknown issue
-* **Automated** flight data uploading.Python is <3
+* **Automation:** of to-be-tracked-flights data.Python is <3
+    * Point of change: `flights.txt` (also copied in README.md)
+    * txt -> excel: `flate.py`
+    * excel file(just for display): `flights.xlsx`
 
 
 ## Conclusion
