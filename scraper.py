@@ -27,15 +27,38 @@ while i < len(flights):
 
 # driver = webdriver.Chrome()
 
-for url in urls: 
-    print('opening: ', url)
-    # webpage = requests.get(url)
-    # content = webpage.content
-    content = urllib2.urlopen(url)
-    soup = BeautifulSoup(content)
-    try:
-        price = soup.findAll("div", attrs={"class": "pSUwrf"})
-        print("price is:",price.text)
-    except:
-        print("can't open")
+# for url in urls: 
+#     print('opening: ', url)
+#     # webpage = requests.get(url)
+#     # content = webpage.content
+#     content = urllib2.urlopen(url)
+#     soup = BeautifulSoup(content)
+#     try:
+#         price = soup.findAll("div", attrs={"class": "VendorPicker"})
+#         print("price is:",price.text)
+#     except:
+#         print("can't open")
 
+
+# uurl = "https://www.dohop.com/flights/BLR/DEL/2019-10-12/adults-1?stops=0#transfer-step/G8118-BLR-DEL-10-12"
+# content = urllib2.urlopen(uurl)
+# soup = BeautifulSoup(content)
+# price = soup.findAll("div", attrs={"class": "VendorPicker"})
+# print("price is:",price.text)
+
+
+webpage = requests.get("https://www.dohop.com/flights/BLR/DEL/2019-10-12/adults-1?stops=0#transfer-step/G8118-BLR-DEL-10-12")
+ 
+#Loading the content
+content = webpage.content
+ 
+#Parsing the content
+result = BeautifulSoup(content, 'html.parser')
+f = open( 'tmp.html', 'w' )
+f.write( repr(result) )
+f.close()
+#Identifying the products on the page by the div tag and the class name
+products = result.find_all("div", {"class": "TransferStepHeader__txt"})
+print("price is:",products)
+
+class="header-txt-1 section-title row"
