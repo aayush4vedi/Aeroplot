@@ -39,8 +39,8 @@ The project started as a bet among my friends when I told my observation about b
 | ID  | Date       |  Day  |   Day Type      | Flight Number |  From  |   To   |Dep.Time| 
 |---- | -----      |  ---- |---------------  | --------------| :----: | :----: | ------ |
 | f1  | 27 Sep '19 |  Fri  | Around Holiday  | Indigo-6E2625 |  Blr   |   Del  | 0025   |
-| f2  | 27 Sep '19 |  Fri  | Around Holiday  | GoAir -G8518  |  Blr   |   Del  | 2235   |
-| f3  | 28 Sep '19 |  Sat  | Around Holiday  | GoAir- G8518  |  Blr   |   Del  | 2235   |
+| f2  | 27 Sep '19 |  Fri  | Around Holiday  | GoAir-G8118   |  Blr   |   Del  | 2055   |
+| f3  | 28 Sep '19 |  Sat  | Around Holiday  | GoAir-G8118   |  Blr   |   Del  | 2055   |
 | f4  | 28 Sep '19 |  Sat  | Around Holiday  | SpiceJ-SG6638 |  Blr   |   Del  | 2310   |
 | f5  | 3 Oct '19  |  Tue  | Around Holiday  | GoAir-G8113   |  Del   |   Blr  | 0550   |
 | f6  | 3 Oct '19  |  Tue  | Around Holiday  | AirIn-AI933   |  Del   |   Blr  | 0510   |
@@ -71,6 +71,10 @@ The project started as a bet among my friends when I told my observation about b
 | f31 | 7 Nov '19  |  Thu  |     Normal      | Indigo-6E2484 |  Blr   |   Del  | 2330   |
 | f32 | 7 Nov '19  |  Thu  |     Normal      | AirIn-AI610   |  Blr   |   Del  | 1910   |
 
+# Progress & Blockers:
+* Google Flight: getting empty content on parsing. Maybe some unknown issue
+
+
 
 ## Conclusion
 TODO: TBD//
@@ -78,3 +82,13 @@ TODO: TBD//
 
 ![picture alt](./media/future-plane.png)
 > "Oh, ma'am, you really shouldn't teleport when you're pregnant. I'm afraid your only choice is (*whispers*): AIR TRAVEL." 
+
+
+
+
+
+
+
+
+
+
