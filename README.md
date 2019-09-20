@@ -9,12 +9,14 @@ Are flight tickets really the cheapest on Tuesday mornings?<br>
 <a href="https://github.com/aayush4vedi/Aeroplot"><img src="https://img.shields.io/badge/Made With-<3-red" alt="Downloads"></a>
 </p>
 
+# Running Instructions:
+* Update flight list in `flights.txt`
+* Run autopilot to update the same in .xlsx : `python autopilot.py`
+* Start the scraper: `python scraper.py`
 
 ## Idea
 The project started as a bet among my friends when I told my observation about booking flights that they are the cheapest on Tuesday (office-time) mornings. So here I'll try to hypothesize my postulate by collecting data from multiple flight booking services for multiple future flights(holiday & non-holiday both) and analysing it graphically.
 
-<br>
-@The Simpsons: Holidays Of Future Passed
 
 ## Plan
 * Scrape data from multiple booking sites.
@@ -29,21 +31,48 @@ The project started as a bet among my friends when I told my observation about b
     * Insert other plots here
 
 # Data Selection:
-* Home(optimal departure time: early morning):Delhi <-> Work(optimal DT: night):Bangalore
-* Websites: makemytrip, ixigo, google flights, paytm
+* Cities: Home(Departure time>= 1800):Delhi <-> Work(Departure Time <=0800):Bangalore
+* Website: [www.dohop.com](www.dohop.com)
 * Day Types: around holiday(holiday just after weekend), normal
-* 2 flights per day: cheaper(1) & costly(2) both
+* Multiple airlines for one day: select the cheapest flight in set Departure Time
 
 ## Flights
-list of flights to be tracked: [text-file](https://github.com/aayush4vedi/Aeroplot/blob/master/flights.txt)
-
+* list of flights to be tracked: [text-file](https://github.com/aayush4vedi/Aeroplot/blob/master/flights.txt)
+* Airlines: (in decreading order of: Dep. Time > price)
+    * Indigo:     6E
+    * SpiceJet:   SG
+    * AirIndia:   AI
+    * GoAir:      G8
+* Days Types:
+    * Around Holidays:(To be deleted when project gets completed)
+        * 2019-10-24 blr->del
+        * 2019-10-25 blr->del
+        * 2019-11-01 blr->del
+        * 2019-11-02 blr->del
+        <br>
+        * 2019-10-28 del->blr
+        * 2019-10-29 del->blr
+        * 2019-10-30 del->blr
+        * 2019-11-04 del->blr
+    * Normal:
+        * 2019-10-23 blr->del
+        * 2019-10-24 blr->del
+        * 2019-11-06 blr->del
+        * 2019-11-07 blr->del
+        <br>
+        * 2019-10-24 del->blr
+        * 2019-10-23 del->blr
+        * 2019-11-06 del->blr
+        * 2019-11-07 del->blr
 
 # Progress & Blockers:
 * **Blocker>>** Google Flight: getting empty content on parsing. Maybe some unknown issue
+    * **Resolved:** Use Dynamic Web Scraping
 * **Automation:** of to-be-tracked-flights data.Python is <3
     * Point of change: `flights.txt` (also copied in README.md)
     * txt -> excel: `autopilot.py`
     * excel file(just for display): `flights.xlsx`
+
 
 
 ## Conclusion
@@ -51,7 +80,7 @@ TODO: TBD//
  
 
 ![picture alt](./media/future-plane.png)
-> "Oh, ma'am, you really shouldn't teleport when you're pregnant. I'm afraid your only choice is (*whispers*): AIR TRAVEL." 
+> "Oh, ma'am, you really shouldn't teleport when you're pregnant. I'm afraid your only choice is (*whispers*): AIR TRAVEL." <br>@The Simpsons: Holidays Of Future Passed
 
 
 

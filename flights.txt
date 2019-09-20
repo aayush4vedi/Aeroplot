@@ -1,39 +1,66 @@
-| ID | Date       |  Day  |   Day Type      | Flight Number |  From  |   To   |Dep.Time| 
-|----|-----       | ----  |---------------  |---------------| :----: | :----: |------- |
-| 1  | 27-09-2019 |  Fri  | Around Holiday  | Indigo-6E2625 |  Blr   |   Del  | 0025   |
-| 2  | 27-09-2019 |  Fri  | Around Holiday  | GoAir-G8118   |  Blr   |   Del  | 2055   |
-| 3  | 28-09-2019 |  Sat  | Around Holiday  | GoAir-G8118   |  Blr   |   Del  | 2055   |
-| 4  | 28-09-2019 |  Sat  | Around Holiday  | SpiceJ-SG6638 |  Blr   |   Del  | 2310   |
-| 5  | 3-10-2019  |  Tue  | Around Holiday  | GoAir-G8113   |  Del   |   Blr  | 0550   |
-| 6  | 3-10-2019  |  Tue  | Around Holiday  | AirIn-AI933   |  Del   |   Blr  | 0510   |
-| 7  | 4-10-2019  |  Fri  | Around Holiday  | Indigo-6E2808 |  Blr   |   Del  | 1930   |
-| 8  | 4-10-2019  |  Fri  | Around Holiday  | SpiceJ-SG6638 |  Blr   |   Del  | 2310   |
-| 9  | 7-10-2019  |  Mon  | Around Holiday  | SpiceJ-SG198  |  Blr   |   Del  | 2045   |
-| 10 | 7-10-2019  |  Mon  | Around Holiday  | Indigo-6E2305 |  Blr   |   Del  | 2125   |
-| 11 | 9-10-2019  |  Wed  | Around Holiday  | Indigo-6E2042 |  Del   |   Blr  | 0545   |
-| 12 | 9-10-2019  |  Wed  | Around Holiday  | GoAir-G8113   |  Del   |   Blr  | 0550   |
-| 13 | 24-10-2019 |  Fri  | Around Holiday  | AirIn-AI587   |  Blr   |   Del  | 2200   |
-| 14 | 24-10-2019 |  Fri  | Around Holiday  | GoAir-G8118   |  Blr   |   Del  | 2055   |
-| 15 | 25-10-2019 |  Fri  | Around Holiday  | GoAir-G8518   |  Blr   |   Del  | 2255   |
-| 16 | 25-10-2019 |  Fri  | Around Holiday  | Indigo-6E2716 |  Blr   |   Del  | 2000   |
-| 17 | 29-10-2019 |  Fri  | Around Holiday  | Indigo-6E5031 |  Del   |   Blr  | 0505   |
-| 18 | 29-10-2019 |  Fri  | Around Holiday  | AirIn-AI933   |  Del   |   Blr  | 0510   |
-| 19 | 30-10-2019 |  Fri  | Around Holiday  | Indigo-6E2701 |  Del   |   Blr  | 0655   |
-| 20 | 30-10-2019 |  Fri  | Around Holiday  | GoAir-G8207   |  Del   |   Blr  | 0500   |
-| 21 | 25-09-2019 |  Wed  |     Normal      | Indigo-6E5031 |  Del   |   Blr  | 0505   |
-| 22 | 25-09-2019 |  Wed  |     Normal      | AirIn-AI851   |  Del   |   Blr  | 0455   |
-| 23 | 25-09-2019 |  Wed  |     Normal      | GoAir-G8518   |  Blr   |   Del  | 2255   |
-| 24 | 25-09-2019 |  Wed  |     Normal      | Indigo-6E2716 |  Blr   |   Del  | 2000   |
-| 25 | 10-10-2019 |  Thu  |     Normal      | SpiceJ-SG8720 |  Blr   |   Del  | 2200   |
-| 26 | 10-10-2019 |  Thu  |     Normal      | GoAir-G8118   |  Blr   |   Del  | 2055   |
-| 27 | 10-10-2019 |  Thu  |     Normal      | Indigo-6E683  |  Del   |   Blr  | 0735   |
-| 28 | 10-10-2019 |  Thu  |     Normal      | GoAir-G82610  |  Del   |   Blr  | 0810   |
-| 29 | 7-11-2019  |  Thu  |     Normal      | Indigo-6E5031 |  Del   |   Blr  | 0505   |
-| 30 | 7-11-2019  |  Thu  |     Normal      | AirIn-AI933   |  Del   |   Blr  | 0510   |
-| 31 | 7-11-2019  |  Thu  |     Normal      | Indigo-6E2484 |  Blr   |   Del  | 2330   |
-| 32 | 7-11-2019  |  Thu  |     Normal      | AirIn-AI610   |  Blr   |   Del  | 1910   |
-
-
-https://www.dohop.com/flights/BLR/DEL/2019-10-12/adults-1?stops=0#transfer-step/G8118-BLR-DEL-10-12  << working
-https://www.dohop.com/flights/BLR/DEL/2019-09-27/adults-1?stops=0#transfer-step/6E2625-BLR-DEL-09-27  << working
-https://www.dohop.com/flights/DEL/BLR/2019-09-25/adults-1?stops=0#transfer-step/AI851-DEL-BLR-09-25  << working
+| ID  | Date       |  Day  |   Day Type      |FlightNo |  From  |   To   |Dep.Time| 
+|---- |-----       | ----  |---------------  |---------| :----: | :----: |------- |
+| f1  | 2019-10-24 |  Thu  | Around Holiday  | 6E2484  |  Blr   |   Del  | 2330   |
+| f2  | 2019-10-24 |  Thu  | Around Holiday  | SG8720  |  Blr   |   Del  | 2200   |
+| f3  | 2019-10-24 |  Thu  | Around Holiday  | G8118   |  Blr   |   Del  | 2055   |
+| f4  | 2019-10-24 |  Thu  | Around Holiday  | AI173   |  Blr   |   Del  | 2105   |
+| f5  | 2019-10-25 |  Fri  | Around Holiday  | 6E2484  |  Blr   |   Del  | 2330   |
+| f6  | 2019-10-25 |  Fri  | Around Holiday  | SG8720  |  Blr   |   Del  | 2200   |
+| f7  | 2019-10-25 |  Fri  | Around Holiday  | G8118   |  Blr   |   Del  | 2055   |
+| f8  | 2019-10-25 |  Fri  | Around Holiday  | AI173   |  Blr   |   Del  | 2105   |
+| f9  | 2019-11-01 |  Fri  | Around Holiday  | 6E2484  |  Blr   |   Del  | 2330   |
+| f10  | 2019-11-01 |  Fri  | Around Holiday  | SG8720  |  Blr   |   Del  | 2200   |
+| f11  | 2019-11-01 |  Fri  | Around Holiday  | G8118   |  Blr   |   Del  | 2055   |
+| f12  | 2019-11-01 |  Fri  | Around Holiday  | AI173   |  Blr   |   Del  | 2110   |
+| f13  | 2019-11-02 |  Sat  | Around Holiday  | 6E2289  |  Blr   |   Del  | 2220   |
+| f14  | 2019-11-02 |  Sat  | Around Holiday  | SG8720  |  Blr   |   Del  | 2200   |
+| f15  | 2019-11-02 |  Sat  | Around Holiday  | G8118   |  Blr   |   Del  | 2055   |
+| f16  | 2019-11-02 |  Sat  | Around Holiday  | AI173   |  Blr   |   Del  | 2110   |
+| f17  | 2019-10-28 |  Mon  | Around Holiday  | 6E2624  |  Del   |   Blr  | 0200   |
+| f18  | 2019-10-28 |  Mon  | Around Holiday  | SG191   |  Del   |   Blr  | 0620   |
+| f19  | 2019-10-28 |  Mon  | Around Holiday  | G8113   |  Del   |   Blr  | 0550   |
+| f20  | 2019-10-28 |  Mon  | Around Holiday  | AI803   |  Del   |   Blr  | 0610   |
+| f21 | 2019-10-29 |  Tue  | Around Holiday  | 6E5031  |  Del   |   Blr  | 0505   |
+| f22 | 2019-10-29 |  Tue  | Around Holiday  | SG191   |  Del   |   Blr  | 0620   |
+| f23 | 2019-10-29 |  Tue  | Around Holiday  | G8113   |  Del   |   Blr  | 0550   |
+| f24 | 2019-10-29 |  Tue  | Around Holiday  | AI803   |  Del   |   Blr  | 0610   |
+| f25 | 2019-10-30 |  Thu  | Around Holiday  | 6E503   |  Del   |   Blr  | 0505   |
+| f26 | 2019-10-30 |  Thu  | Around Holiday  | SG191   |  Del   |   Blr  | 0620   |
+| f27 | 2019-10-30 |  Thu  | Around Holiday  | G8113   |  Del   |   Blr  | 0550   |
+| f28 | 2019-10-30 |  Thu  | Around Holiday  | AI803   |  Del   |   Blr  | 0610   |
+| f29 | 2019-11-04 |  Mon  | Around Holiday  | 6E2134  |  Del   |   Blr  | 0305   |
+| f30 | 2019-11-04 |  Mon  | Around Holiday  | SG191   |  Del   |   Blr  | 0620   |
+| f31 | 2019-11-04 |  Mon  | Around Holiday  | G8113   |  Del   |   Blr  | 0550   |
+| f32 | 2019-11-04 |  Mon  | Around Holiday  | AI803   |  Del   |   Blr  | 0610   |
+| f33 | 2019-10-23 |  Wed  |     Normal      | 6E2484  |  Blr   |   Del  | 2330   |
+| f34 | 2019-10-23 |  Wed  |     Normal      | SG8906  |  Blr   |   Del  | 2310   |
+| f35 | 2019-10-23 |  Wed  |     Normal      | G8118   |  Blr   |   Del  | 2055   |
+| f36 | 2019-10-23 |  Wed  |     Normal      | AI173   |  Blr   |   Del  | 2105   |
+| f37 | 2019-10-24 |  Thu  |     Normal      | 6E2484  |  Blr   |   Del  | 2330   |
+| f38 | 2019-10-24 |  Thu  |     Normal      | SG8720  |  Blr   |   Del  | 2200   |
+| f39 | 2019-10-24 |  Thu  |     Normal      | G8118   |  Blr   |   Del  | 2055   |
+| f40 | 2019-10-24 |  Thu  |     Normal      | AI173   |  Blr   |   Del  | 2105   |
+| f41 | 2019-11-06 |  Wed  |     Normal      | 6E2484  |  Blr   |   Del  | 2330   |
+| f42 | 2019-11-06 |  Wed  |     Normal      | SG8720  |  Blr   |   Del  | 2200   |
+| f43 | 2019-11-06 |  Wed  |     Normal      | G8120   |  Blr   |   Del  | 1140   |
+| f44 | 2019-11-06 |  Wed  |     Normal      | AI173   |  Blr   |   Del  | 2110   |
+| f45 | 2019-09-07 |  Thu  |     Normal      | 6E2484  |  Blr   |   Del  | 2330   |
+| f46 | 2019-09-07 |  Thu  |     Normal      | SG8720  |  Blr   |   Del  | 2200   |
+| f47 | 2019-09-07 |  Thu  |     Normal      | G8120   |  Blr   |   Del  | 1140   |
+| f48 | 2019-09-07 |  Thu  |     Normal      | AI173   |  Blr   |   Del  | 2110   |
+| f49 | 2019-10-23 |  Wed  |     Normal      | 6E2458  |  Del   |   Blr  | 0625   |
+| f50 | 2019-10-23 |  Wed  |     Normal      | SG191   |  Del   |   Blr  | 0610   |
+| f51 | 2019-10-23 |  Wed  |     Normal      | G8113   |  Del   |   Blr  | 0550   |
+| f52 | 2019-10-23 |  Wed  |     Normal      | AI803   |  Del   |   Blr  | 0610   |
+| f53 | 2019-10-24 |  Thu  |     Normal      | 6E5031  |  Del   |   Blr  | 0505   |
+| f54 | 2019-10-24 |  Thu  |     Normal      | SG191   |  Del   |   Blr  | 0610   |
+| f55 | 2019-10-24 |  Thu  |     Normal      | G8113   |  Del   |   Blr  | 0550   |
+| f56 | 2019-10-24 |  Thu  |     Normal      | AI803   |  Del   |   Blr  | 0610   |
+| f57 | 2019-11-06 |  Wed  |     Normal      | 6E2134  |  Del   |   Blr  | 0305   |
+| f58 | 2019-11-06 |  Wed  |     Normal      | SG191   |  Del   |   Blr  | 0620   |
+| f59 | 2019-11-06 |  Wed  |     Normal      | G8113   |  Del   |   Blr  | 0505   |
+| f60 | 2019-11-06 |  Wed  |     Normal      | AI803   |  Del   |   Blr  | 0610   |
+| f61 | 2019-11-07 |  Thu  |     Normal      | 6E5015  |  Del   |   Blr  | 0755   |
+| f62 | 2019-11-07 |  Thu  |     Normal      | SG191   |  Del   |   Blr  | 0620   |
+| f63 | 2019-11-07 |  Thu  |     Normal      | G8113   |  Del   |   Blr  | 0550   |
+| f64 | 2019-11-07 |  Thu  |     Normal      | AI803   |  Del   |   Blr  | 0610   |
