@@ -72,8 +72,8 @@ The project started as a bet among my friends when I told my observation about b
 | f32 | 7 Nov '19  |  Thu  |     Normal      | AirIn-AI610   |  Blr   |   Del  | 1910   |
 
 # Progress & Blockers:
-* Google Flight: getting empty content on parsing. Maybe some unknown issue
-
+* **Blocker>>** Google Flight: getting empty content on parsing. Maybe some unknown issue
+* **Automated** flight data uploading.Python is <3
 
 
 ## Conclusion
