@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 import xlrd
+import openpyxl 
 
 # 1.fetch flight-data from xlsx file
 
@@ -29,44 +30,39 @@ for i in range(1,sheet.nrows):
 
 
 # 2. make urls
-# prefix = "https://www.dohop.com/flights"
-# mid = "adults-1?stops=0#transfer-step"
+
 prefix = "https://www.google.com/flights?hl=en#flt=/m/09c17./m/0dlv0."
 suffix = ";c:INR;e:1;sd:1;t:b;tt:o;sp:0.."
-for i in range(0,4):
-#     url = prefix + "/" + froms[i] + "/" + tos[i] + "/" + dates[i] + "/" + mid + "/" + flights[i] + "-" + froms[i] + "-" + tos[i] + "-" + dates[i][5:]
+for i in range(0,2):
     url = prefix + dates[i] + "." + froms[i] + tos[i] + "0" + flights[i] + suffix
     urls.append(url)
 
-print('#urls:' , len(urls))
-
 # 'periodic' scraping & storing in separete xlsx file
-for url in urls:
-    print('url:', url)
-    driver = webdriver.Chrome()
-    driver.get(url)
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
-    time.sleep(30)
-    res = driver.execute_script("return document.documentElement.outerHTML;")
-    driver.quit()
-    soup = BeautifulSoup(res, 'lxml')
-    try:
-        print('========================================')
-        # box = soup.find('div', {'class': 'VendorPicker'})
-        # prices = box.find_all('div', {'class': 'VendorTile'})
-        # for price in prices:
-        #     p = price.find('div',{'class':'VendorTile--fadeIn'})
-        #     print(p.text)
-        #     prices.append(p)
-        price = soup.find('div', {'class':'pSUwrf flt-headline1'})
-        print(price.text)
-        prices.append(price.text)
-    except:
-        #entered price = NA
-        print('ERROR!')
+# for url in urls:
+#     print('url:', url)
+#     driver = webdriver.Chrome()
+#     driver.get(url)
+#     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
+#     time.sleep(30)
+#     res = driver.execute_script("return document.documentElement.outerHTML;")
+#     driver.quit()
+#     soup = BeautifulSoup(res, 'lxml')
+#     try:
+#         price = soup.find('div', {'class':'pSUwrf flt-headline1'})
+#         price = price.text
+#         print(price)
+#         prices.append(price[2:])
+#     except:
+#         price = prices[-1]
+#         prices.append(price)
+#         print('ERROR!')
 
-print('len of prices:' , len(prices))
+#store data in excel sheet
+db = openpyxl.load_workbook('db.xlsx')
+sheet = db.active
+
+db.save('db.xlsx')
+# print('len of prices:' , len(prices))
 for i in range(0,len(prices)):
-    print('***********')
     print('flight-id:',fid[i] , 'price:', prices[i])
 

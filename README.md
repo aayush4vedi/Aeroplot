@@ -11,7 +11,7 @@ Are flight tickets really the cheapest on Tuesday mornings?<br>
 
 # Running Instructions:
 * Update flight list in `flights.txt`
-* Run autopilot to update the same in .xlsx : `python autopilot.py`
+* Update flight-data & clense the db : `python autopilot.py`
 * Start the scraper: `python scraper.py`
 
 ## Idea
@@ -32,7 +32,7 @@ The project started as a bet among my friends when I told my observation about b
 
 # Data Selection:
 * Cities: Home(Departure time>= 1800):Delhi <-> Work(Departure Time <=0800):Bangalore
-* Website: [www.dohop.com](www.dohop.com)
+* Website: [google flights](www.google.com/flights)
 * Day Types: around holiday(holiday just after weekend), normal
 * Multiple airlines for one day: select the cheapest flight in set Departure Time
 
@@ -72,6 +72,9 @@ The project started as a bet among my friends when I told my observation about b
     * Point of change: `flights.txt` (also copied in README.md)
     * txt -> excel: `autopilot.py`
     * excel file(just for display): `flights.xlsx`
+* **Blocker>>** Not enough time for JS to load on page, causes null price value
+    * **Resolved:** give it enough (sleep)time to load, also catch the error & assume price hasn't changed from the last hour.
+* **Blocker>>** Browser opening every hour on screen is very-very disturbing.
 
 
 
