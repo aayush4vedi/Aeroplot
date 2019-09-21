@@ -49,7 +49,7 @@ The project started as a bet among my friends when I told my observation about b
         * 2019-10-25 blr->del
         * 2019-11-01 blr->del
         * 2019-11-02 blr->del
-        <br>
+        * ----
         * 2019-10-28 del->blr
         * 2019-10-29 del->blr
         * 2019-10-30 del->blr
@@ -59,7 +59,7 @@ The project started as a bet among my friends when I told my observation about b
         * 2019-10-24 blr->del
         * 2019-11-06 blr->del
         * 2019-11-07 blr->del
-        <br>
+        * ----
         * 2019-10-24 del->blr
         * 2019-10-23 del->blr
         * 2019-11-06 del->blr
