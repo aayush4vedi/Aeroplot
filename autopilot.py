@@ -30,5 +30,5 @@ sheet.cell(row = 1, column = 1).value = "TimeStamp"
 for i in range(2,66):
         sheet.cell(row = 1, column = i).value = "f" + str(i-1)
 
-print("======================Database has been restted=========================")
 db.save('db.xlsx')
+print("======================Database has been restted=========================")

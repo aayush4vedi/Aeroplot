@@ -1,1 +1,1 @@
-* * * * * python hello.py >> tmp.txt
+0 * * * * /usr/local/bin/python2.7 /Users/aayushchaturvedi/Projects/SandBox/Aeroplot/scraper.py >> ~/cron.log 2>&1

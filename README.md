@@ -12,7 +12,10 @@ Are flight tickets really the cheapest on Tuesday mornings?<br>
 # Running Instructions:
 * Update flight list in `flights.txt`
 * Update flight-data & clense the db : `python autopilot.py`
-* Start the scraper: `python scraper.py`
+* Adjust time-period & frequency in `aeroplot.cron`
+* Start cron: `crontab aeroplot.cron`
+* Stop cron: `crontab -r`
+
 
 ## Idea
 The project started as a bet among my friends when I told my observation about booking flights that they are the cheapest on Tuesday (office-time) mornings. So here I'll try to hypothesize my postulate by collecting data from multiple flight booking services for multiple future flights(holiday & non-holiday both) and analysing it graphically.
@@ -74,7 +77,20 @@ The project started as a bet among my friends when I told my observation about b
     * excel file(just for display): `flights.xlsx`
 * **Blocker>>** Not enough time for JS to load on page, causes null price value
     * **Resolved:** give it enough (sleep)time to load, also catch the error & assume price hasn't changed from the last hour.
+* **Recurring script running :** use `crontab` (a real boon) 
 * **Blocker>>** Browser opening every hour on screen is very-very disturbing.
+    * **Workarounds:**
+        * Minimise the browser window: `driver.set_window_size(0, 0)`
+        * :no_entry_sign: Selenium Support DEPRECATED: Use PhantomJS browser: `driver = webdriver.PhantomJS()`
+            * It's a discontinued **headless** browser used for automating web page interaction
+        * **Solution:** use headless version of Chrome/Firefox
+            * **Headless browser ==** normal browser minus any UI component
+                ```py
+                options = Options()
+                options.set_headless(headless=True)
+                driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver',options=options)
+                ```
+* Planning to run for a month(23Sep to 23Oct '19) to collect data.Lets see how the project grows with time :) 
 
 
 
