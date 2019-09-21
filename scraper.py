@@ -33,36 +33,34 @@ for i in range(1,sheet.nrows):
 
 prefix = "https://www.google.com/flights?hl=en#flt=/m/09c17./m/0dlv0."
 suffix = ";c:INR;e:1;sd:1;t:b;tt:o;sp:0.."
-for i in range(0,2):
+for i in range(0,2): # make 2nd value = len(fid)
     url = prefix + dates[i] + "." + froms[i] + tos[i] + "0" + flights[i] + suffix
     urls.append(url)
 
 # 'periodic' scraping & storing in separete xlsx file
-# for url in urls:
-#     print('url:', url)
-#     driver = webdriver.Chrome()
-#     driver.get(url)
-#     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
-#     time.sleep(30)
-#     res = driver.execute_script("return document.documentElement.outerHTML;")
-#     driver.quit()
-#     soup = BeautifulSoup(res, 'lxml')
-#     try:
-#         price = soup.find('div', {'class':'pSUwrf flt-headline1'})
-#         price = price.text
-#         print(price)
-#         prices.append(price[2:])
-#     except:
-#         price = prices[-1]
-#         prices.append(price)
-#         print('ERROR!')
+for url in urls:
+    print('url:', url)
+    driver = webdriver.Chrome()
+    driver.get(url)
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
+    time.sleep(30)
+    res = driver.execute_script("return document.documentElement.outerHTML;")
+    driver.quit()
+    soup = BeautifulSoup(res, 'lxml')
+    try:
+        price = soup.find('div', {'class':'pSUwrf flt-headline1'})
+        price = price.text
+        print(price)
+        prices.append(price[2:])
+    except:
+        price = prices[-1]
+        prices.append(price)
+        print('ERROR!')
 
 #store data in excel sheet
 db = openpyxl.load_workbook('db.xlsx')
 sheet = db.active
+#========== add code here ================#
 
 db.save('db.xlsx')
-# print('len of prices:' , len(prices))
-for i in range(0,len(prices)):
-    print('flight-id:',fid[i] , 'price:', prices[i])
 
