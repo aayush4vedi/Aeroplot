@@ -42,10 +42,9 @@ for i in range(0,len(fid)):
 
 db = openpyxl.load_workbook('/Users/aayushchaturvedi/Projects/SandBox/Aeroplot/db.xlsx')
 sheet = db.active
-dateTimeObj = datetime.now()
-print("scraping for: ", dateTimeObj)
+print("scraping for: ", datetime.now())
 entry = []
-entry.append(dateTimeObj)
+entry.append(datetime.now())
 for i in range(0,len(urls)):
     url = urls[i]
     options = Options()
@@ -71,7 +70,7 @@ for i in range(0,len(urls)):
 sheet.append(entry) 
 
 db.save('/Users/aayushchaturvedi/Projects/SandBox/Aeroplot/db.xlsx')
-print("<===================sheet has been updated===================>")
+print("<===============sheet has been updated===================>", datetime.now())
 
 
 
