@@ -53,7 +53,7 @@ for i in range(0,len(urls)):
     driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver',options=options)
     driver.get(url)
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
-    time.sleep(30)
+    time.sleep(15)
     res = driver.execute_script("return document.documentElement.outerHTML;")
     driver.quit()
     soup = BeautifulSoup(res, 'lxml')
@@ -62,16 +62,16 @@ for i in range(0,len(urls)):
         price = price.text[2:]
         prices.append(price[2:])
     except:
-        price = prices[-1]
+        price = 'ERROR'
         prices.append(price)
-        print('ERROR!')
+        print('ERROR for flight', fid[i])
     entry.append(price)
 
-# print('appending:', entry)
+
 sheet.append(entry) 
 
 db.save('/Users/aayushchaturvedi/Projects/SandBox/Aeroplot/db.xlsx')
-
+print("<===================sheet has been updated===================>")
 
 
 

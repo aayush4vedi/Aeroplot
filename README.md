@@ -6,6 +6,7 @@ Are flight tickets really the cheapest on Tuesday mornings?<br>
 <a href="https://github.com/aayush4vedi/Aeroplot"><img src="https://img.shields.io/badge/version-0.1-f39f37" alt="Downloads"></a>
 <a href="https://github.com/aayush4vedi/Aeroplot"><img src="https://img.shields.io/badge/Made With-python-1abc9c" alt="Downloads"></a>
 <a href="https://github.com/aayush4vedi/Aeroplot"><img src="https://img.shields.io/badge/Made With-D3.js-yellow" alt="Downloads"></a>
+<a href="https://github.com/aayush4vedi/Aeroplot"><img src="https://img.shields.io/badge/Made With-crontab-orange" alt="Downloads"></a>
 <a href="https://github.com/aayush4vedi/Aeroplot"><img src="https://img.shields.io/badge/Made With-<3-red" alt="Downloads"></a>
 </p>
 

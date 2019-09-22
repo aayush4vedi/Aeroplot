@@ -5,16 +5,17 @@ text.seek(0)
 
 wb = openpyxl.load_workbook('flights.xlsx')
 sheet = wb.active
+sheet.delete_rows(0,sheet.max_row+1)
 headers = ["ID","Date","Day","Day Type","Flight Number","From","To","Dep Time"]
-for i in range(1,9):
-    sheet.cell(row = 1, column = i).value = headers[i-1]
+sheet.append(headers)
 
-r = 2
 for t in text.readlines()[2:]:
     t = t.split("|")
-    for j in range(1,9):
-        sheet.cell(row = r, column = j).value = t[j].strip()
-    r += 1
+    entry = []
+    for  e in t[1:]:
+        entry.append(e.strip())
+    sheet.append(entry)
+
 
 wb.save('flights.xlsx')
 print("======================Flight data has been updated======================")
