@@ -14,7 +14,7 @@ Are flight tickets really the cheapest on Tuesday mornings?<br>
 * Update flight list in `flights.txt`
 * Update flight-data & clense the db : `python autopilot.py`
 * Adjust time-period & frequency in `aeroplot.cron`
-* Start cron: `crontab aeroplot.cron`
+* Start cron: `crontab aeroplot.cron` :x: | edit crontask with `crontab -e` :white_check_mark:
 * Stop cron: `crontab -r`
 
 
@@ -92,6 +92,15 @@ The project started as a bet among my friends when I told my observation about b
                 driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver',options=options)
                 ```
 * Planning to run for a month(23Sep to 23Oct '19) to collect data.Lets see how the project grows with time :) 
+* UPDATE on 23Oct'19(a month after):
+    - Flight Data successfully fetched.
+    - Have difficult time racing with clock to keep laptop open, could have deployd on Heroku etc, next time
+    - Some flights got removed from google flight, some threw NULL because of other reasons
+* Plan from here:
+    - Clean Data:
+        - remove f34 & f61 (~50% errors rate)
+        - In column: if NULL, copy data in above shell(take care in case of multiple consecutive NULLs)
+    - Implement D3js
 
 
 
