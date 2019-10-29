@@ -96,10 +96,10 @@ The project started as a bet among my friends when I told my observation about b
     - Flight Data successfully fetched.
     - Have difficult time racing with clock to keep laptop open, could have deployd on Heroku etc, next time
     - Some flights got removed from google flight, some threw NULL because of other reasons
-* Plan from here:
+* Plan for Plotting:
     - Clean Data:
         - remove f34 & f61 (~50% errors rate)
-        - In column: if NULL, copy data in above shell(take care in case of multiple consecutive NULLs)
+        - In column: if NULL, copy data in above shell(take care in case of multiple consecutive NULLs) + some rand_num(100,600)
     - Implement D3js
 
 
