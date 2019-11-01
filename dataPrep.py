@@ -9,7 +9,7 @@ def datestr2int(datestring):
     return int(s)
 
 data = {}
-
+d = []
 db = openpyxl.load_workbook('db.xlsx')
 sheet = db.active
 
@@ -23,9 +23,13 @@ for c in range(2,sheet.max_column+1):
         datum.append(entity)
     #data.append(datum)
     data[f_id] = datum
+    d.append(data)
+
+f_data = {}
+f_data['flights'] = d
 
 # print(data);
-j = json.dumps(data, indent=4)
+j = json.dumps(f_data, indent=4)
 f = open('data.json', 'w')
 # print(j, file=f)
 print >> f, j
