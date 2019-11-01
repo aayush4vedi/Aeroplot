@@ -8,19 +8,21 @@ def datestr2int(datestring):
     s = datetime.strftime(d, '%m%d%H')
     return int(s)
 
-data = []
+data = {}
 
 db = openpyxl.load_workbook('db.xlsx')
 sheet = db.active
 
 for c in range(2,sheet.max_column+1):
     datum = []
+    f_id = sheet.cell(row = 1, column = c).value
     for r in range(2, sheet.max_row+1):
         entity = {}
         entity['date'] = datestr2int(sheet.cell(row = r, column = 1).value)
         entity['price'] = sheet.cell(row = r, column = c).value
         datum.append(entity)
-    data.append(datum)
+    #data.append(datum)
+    data[f_id] = datum
 
 # print(data);
 j = json.dumps(data, indent=4)

@@ -34,6 +34,25 @@ svg {
 </style>
 <body>
 <script src="https://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script>
+ $(function() {
+    $.getJSON('data.json', function(data) {
+        var datas = []
+        $.each(data, function(date,price {
+            datas.push()
+            var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+                "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+                $(tblRow).appendTo("#userdata tbody");
+        });
+    });
+});
+
+</script>
+
+
+
+
 <script>
   
 var data = [];
